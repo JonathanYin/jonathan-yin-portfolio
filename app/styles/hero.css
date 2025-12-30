@@ -1,0 +1,94 @@
+.hero {
+	position: relative;
+	min-height: 100vh;
+	background: var(--tone-light);
+	overflow: hidden;
+}
+
+.hero__overlay {
+	position: absolute;
+	inset: 0;
+	background: var(--tone-dark);
+	transform: translateY(-100%);
+	animation: slide-cover 1.4s var(--ease-slow) forwards;
+}
+
+.hero__grid {
+	position: relative;
+	z-index: 2;
+	display: grid;
+	grid-template-columns: auto 1fr 1.2fr;
+	gap: clamp(0.35rem, 1vw, 1.5rem);
+	padding: clamp(0.35rem, 1vw, 1.5rem);
+	color: var(--tone-light);
+	min-height: 100vh;
+}
+
+.hero__intro {
+	align-self: flex-end;
+	padding-bottom: clamp(2rem, 8vw, 6rem);
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	max-width: 28rem;
+	opacity: 0;
+	transform: translateY(40px);
+	animation: fade-up 0.9s var(--ease-slow) 0.45s forwards;
+}
+
+.hero__eyebrow {
+	font-size: 0.9rem;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	color: rgba(236, 231, 193, 0.75);
+}
+
+.hero__headline {
+	font-size: 0.875rem;
+	line-height: 1.6;
+	color: rgba(236, 231, 193, 0.85);
+}
+
+.hero__nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.8em;
+	text-align: right;
+}
+
+.hero__nav-link {
+	font-family: "GrandSlang Roman", var(--font-display), "Cormorant Garamond", serif;
+	font-size: 112px;
+	font-weight: 400;
+	line-height: 0.95;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+	color: #f0e8c3;
+	font-style: normal;
+	opacity: 0;
+	transform: translateY(30px);
+	animation: nav-rise 0.9s var(--ease-slow) forwards;
+	display: inline-block;
+	width: max-content;
+	transition: color 0.2s cubic-bezier(0.44, 0, 0.56, 1), transform 0.2s cubic-bezier(0.44, 0, 0.56, 1), text-decoration-color 0.2s cubic-bezier(0.44, 0, 0.56, 1),
+		text-decoration-thickness 0.2s cubic-bezier(0.44, 0, 0.56, 1), text-underline-offset 0.2s cubic-bezier(0.44, 0, 0.56, 1);
+	will-change: transform, color;
+	text-decoration: none;
+}
+
+.hero__nav-word {
+	display: inline-block;
+	transform: skewX(0deg) translateX(0);
+	transition: transform 0.2s cubic-bezier(0.44, 0, 0.56, 1);
+	transform-origin: left center;
+}
+
+.hero__nav-link:hover {
+	color: #fdf6d8;
+	transform: translateY(0) translateX(0.1em);
+}
+
+.hero__nav-link:hover .hero__nav-word {
+	transform: skewX(-15deg) translateX(20px);
+}

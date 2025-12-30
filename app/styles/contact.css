@@ -1,0 +1,71 @@
+.contact {
+	min-height: 100vh;
+	background: var(--tone-dark);
+	color: var(--tone-dark);
+	position: relative;
+	overflow: hidden;
+}
+
+.contact__overlay {
+	position: absolute;
+	inset: 0;
+	background: var(--tone-light);
+	transform: translateY(100%);
+	animation: contact-reveal 1.5s var(--ease-slow) forwards;
+}
+
+.contact__grid {
+	position: relative;
+	z-index: 3;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	min-height: 100vh;
+	padding: clamp(0.35rem, 1vw, 1.5rem);
+	gap: clamp(0.35rem, 1vw, 1.5rem);
+	color: var(--tone-dark);
+}
+
+.contact__body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 clamp(2rem, 6vw, 5rem);
+	gap: 1.5rem;
+}
+
+.contact__hello {
+	font-family: "GrandSlang Roman", var(--font-display), "Cormorant Garamond", serif;
+	font-size: clamp(4.5rem, 18vw, 10rem);
+	line-height: 1;
+	color: var(--tone-dark);
+	margin: 0;
+	opacity: 0;
+	transform: translateY(40px);
+	animation: fade-up 1s var(--ease-slow) 0.4s forwards;
+}
+
+.contact__lede {
+	color: #3f3b2a;
+	max-width: 32rem;
+	line-height: 1.6;
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fade-up 0.9s var(--ease-slow) 0.6s forwards;
+	font-size: 0.875rem;
+}
+
+.contact__channels {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fade-up 0.9s var(--ease-slow) 0.75s forwards;
+	font-size: 0.875rem;
+}
+
+.contact__channels a {
+	color: var(--tone-dark);
+	text-decoration: underline;
+}

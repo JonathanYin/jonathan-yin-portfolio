@@ -1,0 +1,40 @@
+@keyframes contact-reveal {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes about-reveal {
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slide-cover {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes nav-rise {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fade-up {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
