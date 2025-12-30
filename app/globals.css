@@ -56,41 +56,55 @@ a {
 	z-index: 2;
 	display: grid;
 	grid-template-columns: auto 1fr 1.2fr;
-	gap: clamp(1rem, 3vw, 3rem);
-	padding: clamp(1rem, 3vw, 3rem);
+	gap: clamp(0.35rem, 1vw, 1.5rem);
+	padding: clamp(0.35rem, 1vw, 1.5rem);
 	color: var(--tone-light);
 	min-height: 100vh;
 }
 
-.hero__sidebar {
+.rail {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	width: clamp(4.5rem, 6vw, 5.5rem);
 	padding: 1rem 0;
 	font-size: 0.8rem;
 	letter-spacing: 0.3em;
 	text-transform: uppercase;
+	position: relative;
+	z-index: 3;
+	gap: 1rem;
+	color: inherit;
+	padding-left: clamp(1.5rem, 4vw, 3rem);
 }
 
-.hero__socials {
+.rail--home {
+	color: var(--tone-light);
+}
+
+.rail--contact {
+	color: var(--tone-dark);
+}
+
+.rail__socials {
 	display: flex;
 	flex-direction: column;
 	gap: 1.25rem;
 }
 
-.hero__social-link {
+.rail__social-link {
 	width: 2rem;
 	height: 2rem;
 	border-radius: 999px;
-	border: 1px solid rgba(236, 231, 193, 0.4);
+	border: 1px solid currentColor;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	transition: background 0.3s ease, color 0.3s ease;
 }
 
-.hero__social-link svg {
+.rail__social-link svg {
 	width: 1rem;
 	height: 1rem;
 	stroke: currentColor;
@@ -100,16 +114,40 @@ a {
 	stroke-linejoin: round;
 }
 
-.hero__social-link:hover {
+.rail--home .rail__social-link:hover {
 	background: var(--tone-light);
 	color: var(--tone-dark);
 }
 
-.hero__divider {
+.rail__divider {
 	flex: 1;
 	width: 1px;
-	background: rgba(236, 231, 193, 0.2);
+	background: currentColor;
+	opacity: 0.25;
 	margin: 1rem 0;
+}
+
+.rail__meta {
+	font-size: 0.75rem;
+	letter-spacing: 0.3em;
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	position: relative;
+	left: 0.3em;
+}
+
+.rail__home-link {
+	text-decoration: none;
+	color: inherit;
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	letter-spacing: 0.35em;
+	font-size: 0.75rem;
+	display: inline-block;
+}
+
+.rail__home-link:hover {
+	opacity: 0.7;
 }
 
 .hero__intro {
@@ -182,6 +220,85 @@ a {
 	transform: skewX(-17deg) translateX(0.15em) translateY(0.02em);
 }
 
+.contact {
+	min-height: 100vh;
+	background: var(--tone-dark);
+	color: var(--tone-dark);
+	position: relative;
+	overflow: hidden;
+}
+
+.contact__overlay {
+	position: absolute;
+	inset: 0;
+	background: var(--tone-light);
+	transform: translateY(100%);
+	animation: contact-reveal 1.5s var(--ease-slow) forwards;
+}
+
+.contact__grid {
+	position: relative;
+	z-index: 3;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	min-height: 100vh;
+	padding: clamp(0.35rem, 1vw, 1.5rem);
+	gap: clamp(0.35rem, 1vw, 1.5rem);
+	color: var(--tone-dark);
+}
+
+.contact__body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0;
+	gap: 1.5rem;
+}
+
+.contact__hello {
+	font-family: var(--font-display), "Cormorant Garamond", serif;
+	font-size: clamp(4.5rem, 18vw, 10rem);
+	line-height: 1;
+	color: var(--tone-dark);
+	margin: 0;
+	opacity: 0;
+	transform: translateY(40px);
+	animation: fade-up 1s var(--ease-slow) 0.4s forwards;
+}
+
+.contact__lede {
+	color: #3f3b2a;
+	max-width: 32rem;
+	line-height: 1.6;
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fade-up 0.9s var(--ease-slow) 0.6s forwards;
+}
+
+.contact__channels {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fade-up 0.9s var(--ease-slow) 0.75s forwards;
+}
+
+.contact__channels a {
+	color: var(--tone-dark);
+	text-decoration: underline;
+}
+
+@keyframes contact-reveal {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
 @keyframes slide-cover {
 	0% {
 		transform: translateY(-100%);
@@ -211,10 +328,13 @@ a {
 		text-align: left;
 	}
 
-	.hero__sidebar {
+	.rail {
+		flex-direction: row;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+		gap: 1rem;
+		font-size: 0.7rem;
 	}
 
 	.hero__nav {
@@ -228,21 +348,36 @@ a {
 		width: 60%;
 		margin: 0 auto 3rem;
 	}
+
+	.rail__socials {
+		flex-direction: row;
+		gap: 0.75rem;
+	}
+
+	.rail__divider {
+		width: 30%;
+		height: 1px;
+	}
+
+	.rail__home-link {
+		writing-mode: horizontal-tb;
+		transform: none;
+		letter-spacing: 0.2em;
+	}
+
+	.contact__grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.contact__body {
+		padding-top: 0;
+	}
 }
 
 @media (max-width: 640px) {
 	.hero__grid {
 		padding: clamp(1rem, 6vw, 2rem);
-	}
-
-	.hero__sidebar {
-		gap: 1.5rem;
-		font-size: 0.7rem;
-	}
-
-	.hero__divider {
-		height: 1px;
-		width: 30%;
 	}
 
 	.hero__intro {
