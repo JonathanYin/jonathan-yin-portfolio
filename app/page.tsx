@@ -78,7 +78,7 @@ export default function Home() {
 				<nav className="hero__nav" aria-label="Primary">
 					{navLinks.map((item, index) => (
 						<a key={item.label} href={item.href} className="hero__nav-link" style={{ animationDelay: `${0.75 + index * 0.15}s` }}>
-							{item.label}
+							<span className="hero__nav-word">{item.label}</span>
 						</a>
 					))}
 				</nav>

@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 :root {
 	--tone-light: #ece7c1;
 	--tone-dark: #1a1a18;
@@ -162,16 +160,26 @@ a {
 	display: inline-block;
 	width: max-content;
 	transition:
-		color 0.3s ease,
-		transform 0.3s ease;
+		color 0.45s var(--ease-slow),
+		transform 0.45s var(--ease-slow);
 	will-change: transform, color;
 	text-decoration: none;
+}
+
+.hero__nav-word {
+	display: inline-block;
+	transform: skewX(0deg) translateX(0) translateY(0);
+	transition: transform 0.35s cubic-bezier(0.7, 0, 0.3, 1);
+	transform-origin: left center;
 }
 
 .hero__nav-link:hover {
 	color: #fdf6d8;
 	transform: translateY(0) translateX(0.1em);
-	font-style: italic;
+}
+
+.hero__nav-link:hover .hero__nav-word {
+	transform: skewX(-17deg) translateX(0.15em) translateY(0.02em);
 }
 
 @keyframes slide-cover {
