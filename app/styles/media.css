@@ -6,11 +6,11 @@
 
 	.rail {
 		flex-direction: row;
-		justify-content: space-between;
 		align-items: center;
 		gap: 1rem;
 		font-size: 0.7rem;
-		width: auto;
+		width: 100%;
+		padding: 0;
 	}
 
 	.hero__nav {
@@ -27,6 +27,7 @@
 	.rail__divider {
 		width: 30%;
 		height: 1px;
+		flex: none;
 	}
 
 	.rail__home-link {
@@ -41,7 +42,7 @@
 	}
 
 	.contact__body {
-		padding-top: 0;
+		padding: 0 clamp(1.5rem, 5vw, 3rem) clamp(2rem, 8vw, 4rem);
 	}
 
 	.about__grid {
@@ -75,12 +76,18 @@
 		padding: 1rem;
 		gap: 1.5rem;
 	}
+	
+	.about__grid,
+	.contact__grid {
+		padding: 1rem;
+	}
 
 	.rail {
 		width: 100%;
-		align-items: flex-start;
-		flex-direction: column;
+		align-items: center;
+		flex-direction: row;
 		gap: 0.5rem;
+		padding: 0 0 0.5rem;
 	}
 
 	.rail__socials {
@@ -89,10 +96,11 @@
 	}
 
 	.rail__divider {
-		width: 100%;
+		width: 100px;
 		height: 1px;
 		margin: 0.25rem 0 0.75rem;
 		display: block;
+		flex: none;
 	}
 
 	.rail__meta {
@@ -124,10 +132,11 @@
 	.contact__grid {
 		padding: 1rem;
 		gap: 1.5rem;
+		align-items: flex-start;
 	}
 
 	.contact__body {
-		padding: 0;
+		padding: 0 clamp(1rem, 5vw, 2rem) clamp(1rem, 6vw, 2rem);
 	}
 
 	.about__body {

@@ -65,6 +65,7 @@ export function Rail({ variant }: RailProps) {
         </Link>
       )}
       <div className="rail__divider" aria-hidden />
+      <span className="rail__spacer" aria-hidden />
       <span className="rail__meta" aria-label="Copyright 2026">
         © 2026
       </span>
