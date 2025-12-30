@@ -65,7 +65,7 @@ export default function Home() {
 						))}
 					</div>
 					<div className="hero__divider" aria-hidden />
-					<span>© 2025</span>
+					<span>© 2026</span>
 				</aside>
 
 				<section className="hero__intro">
