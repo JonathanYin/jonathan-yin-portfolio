@@ -55,7 +55,17 @@
 	}
 
 	.about__image-wrap {
-		min-height: 460px;
+		min-height: 400px;
+	}
+}
+
+@media (max-width: 780px) {
+	.about__image-wrap {
+		min-height: 280px;
+	}
+
+	.about__image {
+		object-fit: contain;
 	}
 }
 
@@ -129,6 +139,10 @@
 	}
 
 	.about__image-wrap {
-		min-height: 320px;
+		min-height: 220px;
+	}
+
+	.about__image {
+		object-fit: contain;
 	}
 }
