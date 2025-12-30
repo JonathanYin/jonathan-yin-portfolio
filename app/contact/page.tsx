@@ -20,7 +20,7 @@ export default function ContactPage() {
 							<a href="mailto:jonathanyin66@gmail.com">jonathanyin66@gmail.com</a>
 						</div>
 						<div>
-							<span>On the internet: </span>
+							<span>On the Internet: </span>
 							<a href="https://www.linkedin.com/in/jonathan-yin-" target="_blank" rel="noreferrer">
 								LinkedIn
 							</a>

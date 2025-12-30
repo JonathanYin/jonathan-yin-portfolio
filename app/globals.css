@@ -197,15 +197,16 @@ a {
 	animation: nav-rise 0.9s var(--ease-slow) forwards;
 	display: inline-block;
 	width: max-content;
-	transition: color 0.45s var(--ease-slow), transform 0.45s var(--ease-slow);
+	transition: color 0.25s cubic-bezier(0.44, 0, 0.56, 1), transform 0.25s cubic-bezier(0.44, 0, 0.56, 1), text-decoration-color 0.25s cubic-bezier(0.44, 0, 0.56, 1),
+		text-decoration-thickness 0.25s cubic-bezier(0.44, 0, 0.56, 1), text-underline-offset 0.25s cubic-bezier(0.44, 0, 0.56, 1);
 	will-change: transform, color;
 	text-decoration: none;
 }
 
 .hero__nav-word {
 	display: inline-block;
-	transform: skewX(0deg) translateX(0) translateY(0);
-	transition: transform 0.35s cubic-bezier(0.7, 0, 0.3, 1);
+	transform: skewX(0deg) translateX(0);
+	transition: transform 0.25s cubic-bezier(0.44, 0, 0.56, 1);
 	transform-origin: left center;
 }
 
@@ -215,7 +216,7 @@ a {
 }
 
 .hero__nav-link:hover .hero__nav-word {
-	transform: skewX(-17deg) translateX(0.15em) translateY(0.02em);
+	transform: skewX(-15deg) translateX(20px);
 }
 
 .contact {
