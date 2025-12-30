@@ -15,7 +15,10 @@ export default function ContactPage() {
 					<p className="contact__hello">Hello.</p>
 					<p className="contact__lede">Need a well-structured, beautiful website or product experience? Let&apos;s build something timeless together.</p>
 					<div className="contact__channels">
-						<a href="mailto:jonathanyin66@gmail.com">jonathanyin66@gmail.com</a>
+						<div>
+							<span>Email: </span>
+							<a href="mailto:jonathanyin66@gmail.com">jonathanyin66@gmail.com</a>
+						</div>
 						<div>
 							<span>On the internet: </span>
 							<a href="https://www.linkedin.com/in/jonathan-yin-" target="_blank" rel="noreferrer">

@@ -15,7 +15,7 @@
 body {
 	background: var(--tone-light);
 	color: var(--tone-dark);
-	font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-family: var(--font-body), "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 	margin: 0;
 	min-height: 100vh;
 }
@@ -170,7 +170,7 @@ a {
 }
 
 .hero__headline {
-	font-size: 1.25rem;
+	font-size: 0.875rem;
 	line-height: 1.6;
 	color: rgba(236, 231, 193, 0.85);
 }
@@ -197,9 +197,7 @@ a {
 	animation: nav-rise 0.9s var(--ease-slow) forwards;
 	display: inline-block;
 	width: max-content;
-	transition:
-		color 0.45s var(--ease-slow),
-		transform 0.45s var(--ease-slow);
+	transition: color 0.45s var(--ease-slow), transform 0.45s var(--ease-slow);
 	will-change: transform, color;
 	text-decoration: none;
 }
@@ -252,7 +250,7 @@ a {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 0;
+	padding: 0 clamp(2rem, 6vw, 5rem);
 	gap: 1.5rem;
 }
 
@@ -274,6 +272,7 @@ a {
 	opacity: 0;
 	transform: translateY(20px);
 	animation: fade-up 0.9s var(--ease-slow) 0.6s forwards;
+	font-size: 0.875rem;
 }
 
 .contact__channels {
@@ -283,6 +282,7 @@ a {
 	opacity: 0;
 	transform: translateY(20px);
 	animation: fade-up 0.9s var(--ease-slow) 0.75s forwards;
+	font-size: 0.875rem;
 }
 
 .contact__channels a {
