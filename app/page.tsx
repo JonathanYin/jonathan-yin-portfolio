@@ -17,9 +17,7 @@ export default function Home() {
 
 				<section className="hero__intro">
 					<p className="hero__eyebrow">Jonathan Yin</p>
-					<p className="hero__headline">
-						Software engineer and creative developer simplifying complex interfaces for ambitious teams. Currently crafting immersive experiences in San Francisco.
-					</p>
+					<p className="hero__headline">Software engineer and creative developer crafting refined digital experiences. Currently @ Amplitude in San Francisco. Previously @ Typeface.</p>
 				</section>
 
 				<nav className="hero__nav" aria-label="Primary">
