@@ -97,6 +97,20 @@
 	.work__experience-heading span {
 		text-align: left;
 	}
+
+	.blog__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.blog__posts {
+		grid-template-columns: 1fr;
+	}
+
+	.blog .rail,
+	.blog-post .rail {
+		position: static;
+		height: auto;
+	}
 }
 
 @media (max-width: 780px) {
@@ -134,7 +148,8 @@
 
 	.about__grid,
 	.contact__grid,
-	.work__grid {
+	.work__grid,
+	.blog__grid {
 		padding: 1rem;
 	}
 
@@ -262,5 +277,18 @@
 
 	.work__experience-heading span {
 		text-align: left;
+	}
+
+	.blog__content,
+	.blog-post__content {
+		padding: 1.5rem 1rem 2.5rem;
+	}
+
+	.blog__posts {
+		gap: 1rem;
+	}
+
+	.blog__post-card {
+		padding: 1.25rem;
 	}
 }

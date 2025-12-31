@@ -1,0 +1,162 @@
+.blog,
+.blog-post {
+	min-height: 100vh;
+	background: #ece7c1;
+	color: #1a1a18;
+	position: relative;
+}
+
+.blog {
+	overflow: hidden;
+}
+
+.blog__overlay {
+	position: absolute;
+	inset: 0;
+	background: var(--tone-dark);
+	animation: blog-reveal 1.5s var(--ease-slow) forwards;
+	z-index: 5;
+	pointer-events: none;
+}
+
+.blog__grid {
+	position: relative;
+	z-index: 2;
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr);
+	min-height: 100vh;
+	padding: clamp(0.35rem, 1vw, 1.5rem);
+	gap: clamp(0.35rem, 1vw, 1.5rem);
+	color: var(--tone-dark);
+	align-items: flex-start;
+}
+
+.blog__content,
+.blog-post__content {
+	background: var(--tone-light);
+	color: var(--tone-dark);
+	padding: clamp(1.5rem, 5vw, 4rem);
+	display: flex;
+	flex-direction: column;
+	gap: clamp(2rem, 4vw, 3rem);
+}
+
+.blog .rail,
+.blog-post .rail {
+	color: var(--tone-dark);
+	position: sticky;
+	top: clamp(0.35rem, 1vw, 1.5rem);
+	height: calc(100vh - clamp(0.35rem, 1vw, 1.5rem) * 2);
+}
+
+.blog__header {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fade-up 0.9s var(--ease-slow) 0.35s forwards;
+}
+
+.blog__eyebrow {
+	font-family: "GrandSlang Roman", var(--font-display), "Cormorant Garamond", serif;
+	font-size: clamp(3.5rem, 8vw, 6rem);
+	margin: 0;
+	line-height: 1;
+}
+
+.blog__heading {
+	font-family: "GrandSlang Roman", var(--font-display), "Cormorant Garamond", serif;
+	font-size: clamp(2.2rem, 4vw, 3rem);
+	margin: 0;
+	line-height: 1.15;
+}
+
+.blog__lede {
+	margin: 0;
+	font-size: 0.95rem;
+	line-height: 1.7;
+	color: rgba(26, 26, 24, 0.8);
+}
+
+.blog__posts {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.5rem;
+}
+
+.blog__post-card {
+	border: 1px solid rgba(26, 26, 24, 0.1);
+	padding: 1.5rem;
+	background: rgba(26, 26, 24, 0.02);
+	display: flex;
+	flex-direction: column;
+	gap: 0.85rem;
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fade-up 0.9s var(--ease-slow) forwards;
+}
+
+.blog__post-meta {
+	font-size: 0.85rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: rgba(26, 26, 24, 0.6);
+}
+
+.blog__post-card h2 {
+	margin: 0;
+	font-size: 1.4rem;
+}
+
+.blog__post-card p {
+	margin: 0;
+	color: rgba(26, 26, 24, 0.75);
+	line-height: 1.6;
+}
+
+.blog__post-link {
+	margin-top: auto;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	letter-spacing: 0.3em;
+	color: var(--tone-dark);
+}
+
+.blog-post__header {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.blog-post__header h1 {
+	margin: 0;
+	font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.blog-post__header time {
+	font-size: 0.85rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: rgba(26, 26, 24, 0.7);
+}
+
+.blog-post__body {
+	line-height: 1.7;
+	display: flex;
+	flex-direction: column;
+	gap: 1.4rem;
+}
+
+.blog-post__body h2 {
+	margin: 2rem 0 0.5rem;
+	font-size: 1.6rem;
+}
+
+.blog-post__body p {
+	margin: 0;
+	color: rgba(26, 26, 24, 0.8);
+}

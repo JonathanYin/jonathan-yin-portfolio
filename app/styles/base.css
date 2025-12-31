@@ -38,6 +38,18 @@ body:has(.contact) {
 	background: var(--tone-light);
 }
 
+html:has(.work),
+body:has(.work) {
+	background: var(--tone-dark);
+}
+
+html:has(.blog),
+body:has(.blog),
+html:has(.blog-post),
+body:has(.blog-post) {
+	background: var(--tone-light);
+}
+
 a {
 	color: inherit;
 	text-decoration: none;
