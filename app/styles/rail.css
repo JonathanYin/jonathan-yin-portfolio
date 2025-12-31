@@ -70,10 +70,23 @@
 .rail__meta {
 	font-size: 0.75rem;
 	letter-spacing: 0.3em;
-	writing-mode: vertical-rl;
-	transform: rotate(180deg);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
 	position: relative;
 	left: 0.3em;
+}
+
+.rail__copyright {
+	display: inline-block;
+	writing-mode: vertical-rl;
+	transform: rotate(270deg);
+}
+
+.rail__year {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
 }
 
 .rail__home-link {
