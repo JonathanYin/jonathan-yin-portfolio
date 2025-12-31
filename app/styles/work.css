@@ -3,7 +3,6 @@
 	background: var(--tone-light);
 	color: var(--tone-light);
 	position: relative;
-	overflow: hidden;
 }
 
 .work__overlay {

@@ -11,8 +11,11 @@
 }
 
 .blog__overlay {
-	position: absolute;
-	inset: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
 	background: var(--tone-dark);
 	animation: blog-reveal 1.5s var(--ease-slow) forwards;
 	z-index: 5;
