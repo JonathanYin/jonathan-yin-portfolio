@@ -40,6 +40,7 @@ jobs:
           xvfb-run -a npx -y lighthouse https://www.jonathanyin.xyz \
             --output=html \
             --output-path=./lighthouse-report/index.html \
+            --preset=desktop \
             --only-categories=performance,accessibility,best-practices,seo \
             --chrome-flags="--headless=false --no-sandbox --disable-dev-shm-usage --incognito --window-size=1365,900" \
             --quiet
