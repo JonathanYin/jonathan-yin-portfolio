@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Rail } from "../../../components/Rail";
 import { getAllPostsMeta, getPostBySlug } from "../../../lib/posts";
@@ -26,7 +27,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
 				<article className="blog-post__content">
 					<header className="blog-post__header">
-						<p className="blog__eyebrow">Blog</p>
+						<Link href="/blog" className="blog__eyebrow blog-post__crumb" aria-label="Back to blog">
+							Blog
+						</Link>
 						<h1>{post.meta.title}</h1>
 						<time dateTime={post.meta.publishedAt}>{new Date(post.meta.publishedAt).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</time>
 					</header>

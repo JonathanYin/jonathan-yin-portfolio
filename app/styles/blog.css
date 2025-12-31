@@ -44,6 +44,24 @@
 	gap: clamp(2rem, 4vw, 3rem);
 }
 
+.blog-post__crumb {
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	color: inherit;
+	transition: transform 0.2s var(--ease-slow), opacity 0.2s ease;
+}
+
+.blog-post__crumb:hover {
+	transform: translateX(-3px);
+	opacity: 0.7;
+}
+
+.blog-post__crumb:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 4px;
+}
+
 .blog .rail,
 .blog-post .rail {
 	color: var(--tone-dark);
