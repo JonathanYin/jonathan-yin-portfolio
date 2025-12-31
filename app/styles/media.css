@@ -65,6 +65,23 @@
 	.about__image {
 		object-fit: contain;
 	}
+
+	.work__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.work__content {
+		padding: clamp(1rem, 5vw, 4rem);
+	}
+
+	.work__projects-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.work .rail {
+		position: static;
+		height: auto;
+	}
 }
 
 @media (max-width: 780px) {
@@ -86,7 +103,8 @@
 	}
 
 	.about__grid,
-	.contact__grid {
+	.contact__grid,
+	.work__grid {
 		padding: 1rem;
 	}
 
@@ -177,5 +195,27 @@
 	.about__copy {
 		font-size: 0.85rem;
 		line-height: 1.6;
+	}
+
+	.work__content {
+		padding: 1.5rem 0.5rem 2.5rem;
+		gap: 2rem;
+	}
+
+	.work__meta {
+		gap: 0.5rem;
+		letter-spacing: 0.2em;
+	}
+
+	.work__projects-grid {
+		gap: 1rem;
+	}
+
+	.work__project-card {
+		padding: 1.25rem;
+	}
+
+	.work__project-header {
+		flex-direction: column;
 	}
 }
