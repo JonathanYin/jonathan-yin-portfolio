@@ -40,7 +40,7 @@
 	line-height: 1;
 	color: var(--tone-dark);
 	margin: 0;
-	opacity: var(--fade-start-opacity);
+	opacity: 0;
 	transform: translateY(40px);
 	animation: fade-up 1s var(--ease-slow) 0.4s forwards;
 }
@@ -49,7 +49,7 @@
 	color: #3f3b2a;
 	max-width: 32rem;
 	line-height: 1.6;
-	opacity: var(--fade-start-opacity);
+	opacity: 0;
 	transform: translateY(20px);
 	animation: fade-up 0.9s var(--ease-slow) 0.6s forwards;
 	font-size: 0.875rem;
@@ -59,7 +59,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
-	opacity: var(--fade-start-opacity);
+	opacity: 0;
 	transform: translateY(20px);
 	animation: fade-up 0.9s var(--ease-slow) 0.75s forwards;
 	font-size: 0.875rem;

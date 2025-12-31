@@ -24,7 +24,7 @@
 	gap: var(--work-frame-gap);
 	align-items: flex-start;
 	background: var(--tone-dark);
-	opacity: var(--fade-start-opacity);
+	opacity: 0;
 	transform: translateY(20px);
 	animation: fade-up 0.9s var(--ease-slow) 0.35s forwards;
 }
