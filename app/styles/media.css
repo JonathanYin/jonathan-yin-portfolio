@@ -57,12 +57,19 @@
 
 	.about__image-wrap {
 		min-height: 400px;
+		transform: scale(0.9);
+		transform-origin: top center;
+	}
+
+	.about__image {
+		object-fit: contain;
 	}
 }
 
 @media (max-width: 780px) {
 	.about__image-wrap {
 		min-height: 280px;
+		transform: none;
 	}
 
 	.about__image {
