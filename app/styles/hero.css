@@ -31,7 +31,7 @@
 	flex-direction: column;
 	gap: 1.5rem;
 	max-width: 28rem;
-	opacity: 0;
+	opacity: var(--fade-start-opacity);
 	transform: translateY(40px);
 	animation: fade-up 0.9s var(--ease-slow) 0.45s forwards;
 }
@@ -66,7 +66,7 @@
 	text-transform: uppercase;
 	color: #f0e8c3;
 	font-style: normal;
-	opacity: 0;
+	opacity: var(--fade-start-opacity);
 	transform: translateY(30px);
 	animation: nav-rise 0.9s var(--ease-slow) forwards;
 	display: inline-block;
