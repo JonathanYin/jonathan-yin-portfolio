@@ -7,7 +7,7 @@
 }
 
 .blog {
-	overflow: hidden;
+	overflow: visible;
 }
 
 .blog__overlay {

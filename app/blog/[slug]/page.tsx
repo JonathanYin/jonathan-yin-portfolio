@@ -21,7 +21,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
 	return (
 		<main className="blog-post">
-			<div className="blog__overlay" aria-hidden />
 			<div className="blog__grid">
 				<Rail variant="contact" />
 

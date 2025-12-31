@@ -122,7 +122,7 @@ export default function WorkPage() {
 					<section className="work__section">
 						<div className="work__section-header">
 							<p className="work__section-label">Experience</p>
-							<p className="work__section-subhead">Scaling products alongside fast-moving teams.</p>
+							<p className="work__section-subhead">Scaling products alongside fast-moving teams</p>
 						</div>
 						<ul className="work__experience-list">
 							{experience.map((role) => (
@@ -148,7 +148,7 @@ export default function WorkPage() {
 					<section className="work__section work__projects">
 						<div className="work__section-header">
 							<p className="work__section-label">Selected Projects</p>
-							<p className="work__section-subhead">Independent explorations that pair craft with polish.</p>
+							<p className="work__section-subhead">Independent explorations</p>
 						</div>
 
 						<div className="work__projects-grid">
