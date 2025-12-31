@@ -76,7 +76,7 @@
 		padding: 1rem;
 		gap: 1.5rem;
 	}
-	
+
 	.about__grid,
 	.contact__grid {
 		padding: 1rem;
@@ -87,7 +87,14 @@
 		align-items: center;
 		flex-direction: row;
 		gap: 0.5rem;
-		padding: 0 0 0.5rem;
+		padding: 0.5rem 0 0;
+		margin-top: 0.85rem;
+		align-self: flex-start;
+	}
+
+	.about .rail,
+	.contact .rail {
+		margin-top: 1rem;
 	}
 
 	.rail__socials {
@@ -132,7 +139,6 @@
 	.contact__grid {
 		padding: 1rem;
 		gap: 1.5rem;
-		align-items: flex-start;
 	}
 
 	.contact__body {
@@ -143,15 +149,25 @@
 		padding: 1rem 0;
 	}
 
-	.about__heading {
-		font-size: clamp(2.5rem, 12vw, 3.75rem);
-	}
-
 	.about__image-wrap {
 		min-height: 220px;
 	}
 
 	.about__image {
 		object-fit: contain;
+	}
+
+	.about__eyebrow {
+		font-size: clamp(3rem, 15vw, 4.5rem);
+	}
+
+	.about__heading {
+		font-size: clamp(1.6rem, 9vw, 2.5rem);
+	}
+
+	.about__lede,
+	.about__copy {
+		font-size: 0.85rem;
+		line-height: 1.6;
 	}
 }
