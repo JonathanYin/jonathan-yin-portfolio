@@ -8,7 +8,7 @@ const experience = [
 		title: "Software Engineer II",
 		start: "January 2026",
 		end: "Present",
-		description: "Redesigned the public links experience.",
+		description: "Built Slack integration architecture.",
 	},
 	{
 		company: "Typeface",
