@@ -8,7 +8,7 @@ const experience = [
 		title: "Software Engineer II",
 		start: "January 2026",
 		end: "Present",
-		description: "Built Slack integration architecture.",
+		description: "Built notification infra for Slack and Teams integrations.",
 	},
 	{
 		company: "Typeface",
@@ -26,7 +26,7 @@ const experience = [
 		title: "Instructional Assistant",
 		start: "March 2024",
 		end: "June 2024",
-		description: "Taught CSE 110 - Software Engineering for 350+ students.",
+		description: "Taught CSE 110 - Software Engineering to 350+ students.",
 	},
 	{
 		company: "Center for Applied Internet Data Analysis",
@@ -44,7 +44,7 @@ const experience = [
 		title: "Software Engineer Intern",
 		start: "June 2023",
 		end: "August 2023",
-		description: "Drove an org-wide Python documentation initiative that standardized internal tooling.",
+		description: "Drove an org-wide Python documentation initiative.",
 	},
 	{
 		company: "Stellantis",
@@ -53,7 +53,7 @@ const experience = [
 		title: "Software Development Intern",
 		start: "May 2022",
 		end: "August 2022",
-		description: "Designed a 3D visualization system in Unreal Engine 5 for interactive vehicle renders.",
+		description: "Designed a 3D visualization system for interactive vehicle renders.",
 	},
 	{
 		company: "Berkeley Pharma Tech",
@@ -62,7 +62,7 @@ const experience = [
 		title: "Software Development Intern",
 		start: "June 2021",
 		end: "August 2021",
-		description: "Built and published the company's flagship Android app to the Google Play Store.",
+		description: "Built and published the company's flagship Android app.",
 	},
 ];
 
